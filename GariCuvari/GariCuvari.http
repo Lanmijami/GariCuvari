@@ -1,0 +1,6 @@
+@GariCuvari_HostAddress = http://localhost:5047
+
+GET {{GariCuvari_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
