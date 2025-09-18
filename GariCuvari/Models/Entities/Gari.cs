@@ -9,6 +9,6 @@
         public int Closeness { get; set; }
         public int Priority { get; set; }
 
-
+        public List<Druzenje> Druzenja { get; set; } = new();
     }
 }

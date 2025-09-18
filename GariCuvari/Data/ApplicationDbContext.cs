@@ -12,5 +12,14 @@ namespace GariCuvari.Data
         }
 
         public DbSet<Gari> Garis { get; set; }
+
+        public DbSet<Druzenje> Druzenja { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Gari>().HasMany(g => g.Druzenja).WithMany(d => d.Garis);
+        }
     }
 }
